@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>タップ複数選択</title>
+<style>
+  body { font-family: sans-serif; margin: 12px; min-width: 240px; font-size: 14px; }
+  h1 { font-size: 15px; margin: 0 0 10px; }
+  .row { display: flex; align-items: center; justify-content: space-between; margin: 10px 0; }
+  .note { color: #555; font-size: 12px; line-height: 1.6; }
+  button#toggle { font-size: 15px; font-weight: 700; padding: 8px 16px; border-radius: 8px; border: 0; color: #fff; background: #666; cursor: pointer; }
+  button#toggle.on { background: #1a73e8; }
+</style>
+</head>
+<body>
+<h1>タップ複数選択 v1.0.0</h1>
+<div class="row"><span>複数選択モード</span><button id="toggle" type="button">OFF</button></div>
+<p class="note">ONの間、タップが「Ctrl+クリック」としてページに渡ります。PCでCtrl+クリック複数選択ができるサイトで、そのまま複数選択できます。ページ右下のボタンでも切り替えられます。</p>
+<p class="note">※ 入力欄・プルダウンなどは対象外です。サイト側の作りによっては効かない場合があります。</p>
+<script src="popup.js"></script>
+</body>
+</html>

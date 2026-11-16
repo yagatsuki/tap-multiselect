@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><title>tms test</title>
+<style>.item{display:inline-block;width:80px;height:80px;margin:6px;background:#ddd;line-height:80px;text-align:center}.item.sel{background:#1a73e8;color:#fff}</style>
+</head><body>
+<div id="grid"></div>
+<input id="memo" type="text" placeholder="input test">
+<div id="log"></div>
+<script>
+const grid = document.getElementById('grid');
+for (let i = 0; i < 6; i++) {
+  const d = document.createElement('div');
+  d.className = 'item'; d.textContent = 'item' + i; d.dataset.idx = i;
+  d.addEventListener('click', (ev) => {
+    document.getElementById('log').textContent += ` click${i}:ctrl=${ev.ctrlKey},trusted=${ev.isTrusted};`;
+    if (ev.ctrlKey || ev.metaKey) { d.classList.toggle('sel'); }
+    else { document.querySelectorAll('.item').forEach(x => x.classList.remove('sel')); d.classList.add('sel'); }
+  });
+  grid.appendChild(d);
+}
+</script>
+</body></html>
