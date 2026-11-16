@@ -25,3 +25,4 @@
 
 - `manifest.json` / `content.js` / `popup.html` / `popup.js` / `icons/`
 - `test/test.html`：Ctrl+クリック複数選択を実装した検証用ページ
+- `tools/make_icons.py`：アイコン（icons/）の生成スクリプト。公開リポジトリにはアイコンの画像ファイル自体は含まれないため、利用前にこのスクリプトで生成してください
